@@ -9,10 +9,16 @@ public class Register extends JFrame {
 
     public Register() {
         setTitle("Register");
-        setSize(400, 250);
+        setSize(600, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
+		ImageIcon bgIcon = new ImageIcon(new ImageIcon("background.jpg")
+                          .getImage().getScaledInstance(600, 400, Image.SCALE_SMOOTH));
+        JLabel background = new JLabel(bgIcon);
+         background.setBounds(0, 0, 600, 400);
+        setContentPane(background);
+       background.setLayout(null); 
 
         JLabel userLabel = new JLabel("New Username:");
         userLabel.setBounds(50, 50, 120, 30);
